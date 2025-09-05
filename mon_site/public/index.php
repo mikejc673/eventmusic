@@ -2,7 +2,7 @@
 
 use App\Kernel;
 
-require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+require_once dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
 return function (array $context) {
     return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
@@ -11,25 +11,30 @@ return function (array $context) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>SUNFEST</title>
     <link rel="stylesheet" href="{{ asset('css/sunfest.css') }}">
+    <link rel="stylesheet" href="bootstrap-5.3.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="background-container">
         <img src="{{ asset('images/sunfest_bg.jpeg') }}" alt="Foule de festivaliers de nuit avec étoiles">
     </div>
-    
+
     <div class="overlay">
         <header>
             <nav class="main-nav">
-                </nav>
+            </nav>
         </header>
 
         <main class="content-container">
             <h1 class="main-heading">Hello world!</h1>
             <p class="event-date">06.28.018</p>
-            
+
             <div class="countdown-timer">
                 <div class="timer-box">
                     <span class="timer-value">0</span>
@@ -51,5 +56,5 @@ return function (array $context) {
         </main>
     </div>
 </body>
-</html>
 
+</html>
