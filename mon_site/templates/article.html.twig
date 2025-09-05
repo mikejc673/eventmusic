@@ -1,0 +1,10 @@
+{# templates/article.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+    <h1>{{ article.titre|default('Titre de l\'article') }}</h1>
+    <p>{{ article.contenu|default('Contenu de l\'article...') }}</p>
+    <p><em>Auteur : {{ article.auteur|default('Auteur inconnu') }}</em></p>
+{% endblock %}
